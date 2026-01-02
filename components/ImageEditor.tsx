@@ -1141,14 +1141,6 @@ export const ImageEditor: React.FC<ImageEditorProps> = ({ user, onLogout, onBack
         </div>
 
         <div className="flex items-center gap-3">
-          {onBackToAdmin && (
-             <button onClick={onBackToAdmin} className="hidden md:flex items-center gap-1.5 text-xs font-medium text-indigo-400 hover:text-white transition-colors px-3 py-1.5 rounded-lg hover:bg-indigo-500/20 border border-indigo-500/30">
-                <LayoutDashboard className="w-3.5 h-3.5" />
-                Admin
-             </button>
-          )}
-          <div className="h-6 w-px bg-gray-800 mx-1"></div>
-          
           <button onClick={() => setShowSettings(true)} className={`flex items-center gap-1.5 text-xs font-medium transition-colors px-3 py-1.5 rounded-lg border ${customApiKey ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30' : 'text-gray-400 hover:text-white hover:bg-gray-800 border-transparent'}`}>
             <Settings className="w-3.5 h-3.5" /> 
             {customApiKey ? t.usingCustomKey : t.settings}
